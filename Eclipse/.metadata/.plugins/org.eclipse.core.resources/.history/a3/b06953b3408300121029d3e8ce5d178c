@@ -1,0 +1,14 @@
+package br.com.empresa.funcionarios;
+
+public class TestaInteger {
+	
+	Integer x1 = new Integer(10);
+	Integer x2 = new Integer(10);
+	
+	if(x1 == x2){
+		System.out.println("Igual");
+	} else {
+		System.out.println("Diferente");
+	}
+
+}

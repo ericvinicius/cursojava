@@ -1,7 +1,7 @@
 package br.com.empresa.conta;
 /**
  * 
- * Classe responsavel por moldar a contas do banco.
+ * Classe responsavel por moldar as contas do banco.
  * 
  * @author oo3305
  * @version 1.0
@@ -10,8 +10,18 @@ package br.com.empresa.conta;
  *
  */
 abstract public class Conta {
-
+	protected int numero;
 	private double saldo;
+	
+	public boolean equals(Object obj){
+		Conta outraConta = (Conta) obj;
+		
+		return this.numero == outraConta.numero;
+	}
+	
+	public String toString(){
+		return "Esse Objeto é uma conta com saldo R$" + this.saldo;
+	}
 
 	/**
 	 * 

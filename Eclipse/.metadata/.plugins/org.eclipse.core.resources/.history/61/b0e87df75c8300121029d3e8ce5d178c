@@ -1,0 +1,24 @@
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
+
+public class SaidaDeUmArquivo {
+	public static void main(String[] args) throws IOException{
+		
+		OutputStream os = new FileOutputStream("Saida.txt");
+		OutputStreamWriter osw = new OutputStreamWriter(os);
+		BufferedWriter bw = new BufferedWriter(osw);
+		
+		Scanner entrada = new Scanner((Readable) os);
+		
+		while(entrada.hasNextLine()){
+			String linha = entrada.nextLine();
+			bw.write(linha);
+			bw.newLine();
+		}
+		bw.close();
+	}
+}

@@ -1,0 +1,38 @@
+package br.com.empresa.conta;
+/**
+ * 
+ * Classe responsavel por moldar a contas do banco.
+ * 
+ * @author oo3305
+ * @version 1.0
+ *
+ *	
+ *
+ */
+abstract public class Conta {
+
+	private double saldo;
+
+	/**
+	 * 
+	 * @param valor
+	 * 
+	 * 
+	 */
+	public void deposita(double valor) {
+		if(valor < 0){
+			throw new IllegalArgumentException("Voce tentou depositar um valor negativo");
+		} else{
+			this.saldo += valor - 0.10;
+		}
+	}
+
+	public void atualiza(double taxa) {
+		this.saldo += this.saldo * taxa;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+}
