@@ -1,0 +1,18 @@
+public class TesteErro {
+	public static void main(String[] args){
+		System.out.println("Inicio do Main");
+		metodo1();
+		
+	}
+
+	static void metodo1() {
+		 System.out.println("Inicio do Metodo 1");
+		 metodo2();
+	}
+
+	static void metodo2() {
+		System.out.println("Inicico do Metodo 2");
+		
+		int[] array = new int[10];
+	}
+}

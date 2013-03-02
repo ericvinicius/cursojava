@@ -1,0 +1,8 @@
+package br.com.empresa.conta;
+import Tributavel;
+
+class SeguroDeVida implements Tributavel {
+	public double calculaTributos(){
+		return 42;
+	}
+}

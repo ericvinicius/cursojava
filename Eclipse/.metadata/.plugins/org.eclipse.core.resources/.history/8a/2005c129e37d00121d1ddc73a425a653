@@ -1,0 +1,18 @@
+import br.com.empresa.conta.Conta;
+
+public class ContaCorrente extends Conta implements Tributavel {
+
+	public void deposita(double valor) {
+		super.deposita(valor - 0.10);
+	}
+
+	public void atualiza(double taxa) {
+		super.atualiza(2 * taxa);
+	}
+	
+	public double calculaTributos(){
+		return this.getSaldo() * 0.01;
+	}
+	
+
+}

@@ -1,0 +1,27 @@
+class funcionario{
+	String nome;
+	double salario;
+	double aumento;
+	int idade;
+	int qtd = 0;
+
+	
+	Data dataEntrada = new Data();
+
+	void adiciona(funcionario f){
+		this.empregado[i] = f;
+		this.qtd++;
+	}
+
+	double recebeAumento(double aumento){
+		salario += aumento;
+		return salario;
+	}
+
+	void mostra(){
+		this.dataEntrada.mostra();
+		System.out.println("\tNome: " + this.nome);
+		System.out.println("\tIdade: " + this.idade + " anos");
+		System.out.println("\tSalario: R$" + this.salario);
+	}
+}

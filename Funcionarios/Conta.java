@@ -1,20 +1,19 @@
 class Conta{
-	private double saldo = 100;
+	protected double saldo;
 
-
-	public void depositar(double deposito){
+	public void deposita(double deposito){
 		this.saldo += deposito;
 	}
 
-	public void saca(double valor){
-		if(this.saldo >= valor){	
-			this.saldo -= valor;
-		} else {
-			System.out.println("Saldo insuficiente.");
-		}
+	public void saca(double valor){	
+		this.saldo -= valor;
 	}
 
-	public double mostra(){
+	void atualiza(double taxa){
+		this.saldo += this.saldo * taxa;
+	}
+
+	public double getSaldo(){
 		return this.saldo;
 	}
 

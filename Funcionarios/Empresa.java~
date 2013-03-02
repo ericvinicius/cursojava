@@ -1,0 +1,10 @@
+class Empresa{
+	int qtd = 0;
+	
+	Funcionario[] empregados;
+
+	void adiciona(funcionario f){
+		this.empregados[this.qtd] = f;
+		this.qtd++;
+	}
+}

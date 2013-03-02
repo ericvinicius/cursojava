@@ -1,0 +1,26 @@
+class Exe412a{
+	public static void main(String[] args){
+	
+		funcionario f1 = new funcionario();
+
+		f1.nome = "Eric";
+		f1.salario = 1000;		
+		f1.aumento = 250.75;
+		f1.recebeAumento(f1.aumento);
+		f1.mostra();
+
+		funcionario f2 = new funcionario();
+
+		f2.nome = "Thais";
+		f2.salario = 1000;
+		f2.aumento = 570.09;
+		f2.recebeAumento(f2.aumento);
+		f2.mostra();
+
+		if(f1 == f2){
+			System.out.println("Iguais");
+		} else {
+			System.out.println("Diferentes");
+		}
+	}
+}

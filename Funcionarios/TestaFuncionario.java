@@ -3,10 +3,12 @@ class TestaFuncionario{
 		int i = 1;
 
 		Empresa losNerds = new Empresa();
-		losNerds.empregados = new funcionario[10];
+		losNerds.empregados = new Funcionario[10];
 
-		funcionario f1 = new funcionario();
-		Conta contaf1 = new Conta();
+		Funcionario f1 = new Funcionario();
+		Conta cf1 = new Conta();
+		ContaCorrente ccf1 = new ContaCorrente();
+		ContaPoupanca cpf1 = new ContaPoupanca();
 		
 		Data data = new Data();
 
@@ -16,23 +18,32 @@ class TestaFuncionario{
 
 		f1.nome = "Eric";		
 		f1.idade = 17;
-		f1.salario = 1000;		
+		f1.setSalario(1000);		
 		f1.aumento = 250.75;
-		f1.recebeAumento(f1.aumento);
-		losNerds.adiciona(f1);
+		f1.getAumento(f1.aumento);
+		losNerds.adiciona(f1);		
+
+		cf1.deposita(1000);
+		ccf1.deposita(1000);
+		cpf1.deposita(1000);
+
+		cf1.atualiza(0.01);
+		ccf1.atualiza(0.01);
+		cpf1.atualiza(0.01);	
+
 		f1.mostra();
 
 		System.out.println("---------------------------------------------------");
 		System.out.println("Funcionario " + i + ":");
 		i++;
 
-		funcionario f2 = new funcionario();
+		Funcionario f2 = new Funcionario();
 	
-		f2.nome = "Thais";
-		f2.idade = 18;
-		f2.salario = 1000;
+		f2.nome = "Vinicius";
+		f2.idade = 17;
+		f2.setSalario(1000);
 		f2.aumento = 570.10;
-		f2.recebeAumento(f2.aumento);
+		f2.getAumento(f2.aumento);
 		losNerds.adiciona(f2);
 		f2.dataEntrada = data;
 		f2.mostra();

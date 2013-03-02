@@ -1,9 +1,9 @@
 class Empresa{
 	int qtd = 0;
 	
-	funcionario[] empregados;
+	Funcionario[] empregados;
 
-	void adiciona(funcionario f){
+	void adiciona(Funcionario f){
 		this.empregados[this.qtd] = f;
 		this.qtd++;
 	}
